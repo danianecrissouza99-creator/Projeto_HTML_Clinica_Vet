@@ -1,0 +1,13 @@
+/* Estilo básico para as imagens não saírem do ecrã */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Cantos arredondados para ficar mais moderno */
+    margin-bottom: 20px;
+    display: block;
+}
+
+section#instalacoes article {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
