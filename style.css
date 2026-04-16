@@ -1,0 +1,140 @@
+
+/* ==========================================================
+   1. RESET BÁSICO E FONTES
+   Garante que o site é igual em todos os navegadores
+========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================
+   2. VARIÁVEIS DE CORES (Inspiradas no Logo e Receção)
+========================================================== */
+:root {
+    --azul-pastel: #85C1E9;   /* Cor do coração do logo */
+    --roxo-pastel: #A593E0;   /* Cor da faixa "Veterinária & Bem-Estar" */
+    --laranja-pets: #F39C12;  /* Cor do cãozinho e letras */
+    --rosa-pastel: #F48FB1;   /* Cor das patinhas e almofadas */
+    --fundo-geral: #F8F9FA;   /* Cor das paredes da clínica */
+    --texto-escuro: #4A4A4A;  /* Cor do texto para boa leitura */
+    --branco-puro: #FFFFFF;
+}
+
+/* ==========================================================
+   3. ESTILOS GERAIS (Body e Tipografia)
+========================================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fundo-geral);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: var(--texto-escuro);
+    margin-bottom: 15px;
+}
+
+h2 { color: var(--laranja-pets); }
+h3 { color: var(--azul-pastel); }
+
+/* ==========================================================
+   4. CABEÇALHO E NAVEGAÇÃO
+========================================================== */
+header {
+    background-color: var(--branco-puro);
+    text-align: center;
+    padding: 30px 0 0 0;
+    border-bottom: 5px solid var(--roxo-pastel);
+}
+
+header h1 {
+    color: var(--azul-pastel);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+nav {
+    background-color: var(--azul-pastel);
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Ajuda se o ecrã for pequeno */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--branco-puro);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 20px;
+    border-radius: 25px; /* Botões arredondados */
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--roxo-pastel); /* Muda de cor ao passar o rato */
+}
+
+/* ==========================================================
+   5. CONTEÚDO PRINCIPAL (Main, Sections, Articles)
+========================================================== */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Estilo de "Cartão" para as secções, a imitar a limpeza da clínica */
+section {
+    background-color: var(--branco-puro);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+article {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+article:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* ==========================================================
+   6. IMAGENS
+========================================================== */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px; /* Cantos arredondados nas fotos */
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================
+   7. RODAPÉ (Footer)
+========================================================== */
+footer {
+    background-color: var(--texto-escuro);
+    color: var(--branco-puro);
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
