@@ -13,7 +13,7 @@
         <h1>Clínica Pets</h1>
         <nav>
             <ul>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
                 <li><a href="equipa.html">A Nossa Equipa</a></li>
                 <li><a href="projetos.html">Projetos Sociais</a></li>
@@ -29,14 +29,23 @@
 
             <div class="container-contacto">
                 <div class="info-contacto">
+                    
+                    <div class="mascote-container">
+                        <img src="imagens/Publicidade.png" alt="Mascotes da Clínica Pets" class="img-mascote">
+                    </div>
+
                     <h3>📍 A Nossa Clínica</h3>
                     <p><strong>Morada:</strong> Rua dos Animais Felizes, 123<br>4000-000 Porto, Portugal</p>
                     
                     <div class="mapa-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48058.41113038662!2d-8.65825595563583!3d41.16175881476307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465abc4e153cb%3A0xeaa5606422d3e38!2sPorto!5e0!3m2!1spt-PT!2spt!4v1713312000000!5m2!1spt-PT!2spt" 
-                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.185611328082!2d-8.60833182346543!3d41.1313032120002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465abc4e153cb%3A0xeaa5606422d3e38!2sPorto!5e0!3m2!1spt-PT!2spt!4v1713312000000!5m2!1spt-PT!2spt" 
+                    height="250" 
+                    style="width: 100%; border: 0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                     </div>
 
                     <h3>📞 Contactos Diretos</h3>
@@ -51,13 +60,14 @@
                 </div>
 
                 <div class="formulario-contacto">
+                    
                     <h3>✉️ Envie-nos uma Mensagem</h3>
                     
                     <form action="#" method="POST" class="form-pets">
                         
                         <div class="grupo-input">
                             <label for="nome">O seu Nome:</label>
-                            <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" required>
+                            <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" required minlength="3">
                         </div>
 
                         <div class="grupo-input">
@@ -98,7 +108,7 @@
 
                         <div class="grupo-input">
                             <label for="mensagem">Mensagem:</label>
-                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar o seu pet hoje?" required></textarea>
+                            <textarea id="mensagem" name="mensagem" rows="4" minlength="10" placeholder="Como podemos ajudar o seu pet hoje?" required></textarea>
                         </div>
 
                         <button type="submit" class="btn-enviar">Enviar Mensagem 🐾</button>
@@ -113,18 +123,10 @@
     </footer>
 
     <script>
-        // Seleciona o formulário através da classe
         document.querySelector('.form-pets').addEventListener('submit', function(event) {
-            // 1. Impede a página de recarregar ou dar erro
             event.preventDefault(); 
-            
-            // 2. Vai buscar o nome que a pessoa escreveu no campo "nome"
             let nomePessoa = document.getElementById('nome').value;
-            
-            // 3. Mostra um alerta amigável de sucesso
             alert('🐾 Obrigado, ' + nomePessoa + '! A sua mensagem foi enviada com sucesso para a Clínica Pets. Entraremos em contacto em breve.');
-            
-            // 4. Limpa todos os campos do formulário para o próximo uso
             this.reset(); 
         });
     </script>
