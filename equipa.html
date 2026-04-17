@@ -6,7 +6,6 @@
     <title>Clínica Pets | A Nossa Equipa</title>
 
     <link rel="icon" type="image/png" href="imagens/logoAba.png">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,34 +24,120 @@
 
     <main>
         <section>
-            <table>
+            <h2>Corpo Clínico e Especialistas</h2>
+            <p>Conheça os rostos por trás da excelência da Clínica Pets. Uma equipa multidisciplinar unida pela causa animal. <br><em>(Clique na foto para ampliar)</em></p>
+
+            <table class="tabela-cards">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th></th>
+                        <th colspan="2">Os Nossos Especialistas</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <img src="" alt="">
+                            <a href="#modal-sofia">
+                                <img src="imagens/Sofia.png" alt="Dra. Sofia Almeida" class="foto-perfil">
+                            </a>
+                            <h3>Dra. Sofia Almeida</h3>
+                            <p class="cargo">Diretora Clínica</p>
+                            <ul class="info-lista">
+                                <li><strong>Formação:</strong> Mestrado Integrado (ICBAS-UP).</li>
+                                <li><strong>No Resgate:</strong> Triagem comportamental e seleção de famílias.</li>
+                                <li><strong>Dica:</strong> "Check-ups anuais salvam vidas."</li>
+                            </ul>
                         </td>
                         <td>
-                            <ul>
-                                <li></li>
-                                <li></li>
+                            <a href="#modal-miguel">
+                                <img src="imagens/Miguel.png" alt="Dr. Miguel Carvalho" class="foto-perfil">
+                            </a>
+                            <h3>Dr. Miguel Carvalho</h3>
+                            <p class="cargo">Cirurgia e Ortopedia</p>
+                            <ul class="info-lista">
+                                <li><strong>Formação:</strong> Especialização em Traumatologia (Madrid).</li>
+                                <li><strong>No Resgate:</strong> Coordena cirurgias críticas do Fundo de Resgate.</li>
+                                <li><strong>Dica:</strong> "Trela e identificação são segurança."</li>
                             </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="#modal-ines">
+                                <img src="imagens/ines.png" alt="Dra. Inês Duarte" class="foto-perfil">
+                            </a>
+                            <h3>Dra. Inês Duarte</h3>
+                            <p class="cargo">Patologia e Diagnóstico</p>
+                            <ul class="info-lista">
+                                <li><strong>Formação:</strong> Doutorada em Ciências Veterinárias.</li>
+                                <li><strong>No Resgate:</strong> Rastreio completo de doenças pré-adoção.</li>
+                                <li><strong>Dica:</strong> "Desparasitar é cuidar de toda a família."</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <a href="#modal-carla">
+                                <img src="imagens/carla.png" alt="Carla Mendes" class="foto-perfil">
+                            </a>
+                            <h3>Carla Mendes</h3>
+                            <p class="cargo">Estética Animal Profissional</p>
+                            <ul class="info-lista">
+                                <li><strong>Formação:</strong> Certificação Internacional em Grooming.</li>
+                                <li><strong>No Resgate:</strong> Cria o "Banho da Esperança" para os resgatados.</li>
+                                <li><strong>Dica:</strong> "A escovagem diária fortalece o vínculo."</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" class="perfil-unico">
+                            <div class="card-centrado">
+                                <a href="#modal-joao">
+                                    <img src="imagens/joao.png" alt="João Ribeiro" class="foto-perfil">
+                                </a>
+                                <h3>João Ribeiro</h3>
+                                <p class="cargo">Gestão de Atendimento</p>
+                                <ul class="info-lista">
+                                    <li><strong>Formação:</strong> Licenciatura em Gestão e Comunicação.</li>
+                                    <li><strong>No Resgate:</strong> Gestor do Fundo e contacto com associações.</li>
+                                    <li><strong>Dica:</strong> "Se não pode adotar, apadrinhe."</li>
+                                </ul>
+                            </div>
                         </td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="2"></td>
+                        <td colspan="2">Especialistas comprometidos com a ética e o bem-estar animal.</td>
                     </tr>
                 </tfoot>
             </table>
         </section>
     </main>
+
+    <div id="modal-sofia" class="modal-foto">
+        <a href="#!" class="fechar-modal">&times;</a>
+        <img src="imagens/Sofia.png" alt="Dra. Sofia Ampliada">
+    </div>
+
+    <div id="modal-miguel" class="modal-foto">
+        <a href="#!" class="fechar-modal">&times;</a>
+        <img src="imagens/Miguel.png" alt="Dr. Miguel Ampliado">
+    </div>
+
+    <div id="modal-ines" class="modal-foto">
+        <a href="#!" class="fechar-modal">&times;</a>
+        <img src="imagens/ines.png" alt="Dra. Inês Ampliada">
+    </div>
+
+    <div id="modal-carla" class="modal-foto">
+        <a href="#!" class="fechar-modal">&times;</a>
+        <img src="imagens/carla.png" alt="Carla Mendes Ampliada">
+    </div>
+
+    <div id="modal-joao" class="modal-foto">
+        <a href="#!" class="fechar-modal">&times;</a>
+        <img src="imagens/joao.png" alt="João Ribeiro Ampliado">
+    </div>
 
     <footer>
         <p>&copy; 2026 Clínica Pets. Desenvolvido por Daniane Souza e Daniel Silva (ISTEC Porto).</p>

@@ -138,3 +138,344 @@ footer {
     margin-top: 50px;
     font-size: 0.9rem;
 }
+
+/* ==========================================================
+   9. ANIMAÇÕES FOFAS (HOVER)
+========================================================== */
+/* Efeito de saltinho nas imagens */
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: translateY(-8px) scale(1.02); /* Sobe um bocadinho e aproxima */
+    box-shadow: 0 12px 20px rgba(244, 143, 177, 0.4); /* Sombra rosinha suave */
+}
+
+/* Efeito no botão do menu */
+nav a {
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.1); /* O botão cresce um pouquinho */
+    background-color: var(--rosa-pastel); /* Muda para rosa ao passar o rato */
+}
+
+/* ==========================================================
+   11. TABELA DE PERFIS (ESTILO GRID/CARDS)
+========================================================== */
+.tabela-cards {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px; /* Cria espaço entre os "cartões" */
+    margin-top: 30px;
+}
+
+.tabela-cards thead th {
+    background-color: var(--laranja-pets);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+/* Estilo de cada Célula (Cartão) */
+.tabela-cards td {
+    background-color: var(--branco-puro);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    vertical-align: top;
+    text-align: center; /* Centra a foto e o título */
+    width: 50%;
+    border: 1px solid #f0f0f0;
+}
+
+/* Foto em Cima e Grande */
+.foto-perfil {
+    width: 250px; /* Tamanho maior para qualidade */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 6px solid var(--rosa-pastel);
+    margin-bottom: 20px;
+    /* Transição suave para o salto, sombra e cor da borda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
+}
+
+/* Efeito Interativo ao passar o rato no Link da Foto */
+a:hover img.foto-perfil {
+    transform: translateY(-5px) scale(1.03); /* Dá um pequeno salto */
+    border-color: var(--laranja-pets); /* A borda muda de rosa para laranja */
+    box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3); /* Ganha uma sombra laranja fofa */
+}
+
+.cargo {
+    color: var(--roxo-pastel);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Lista de Informações em Baixo */
+.info-lista {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Texto da descrição alinhado à esquerda para ler melhor */
+    display: inline-block; /* Mantém a lista compacta no centro */
+}
+
+.info-lista li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+.info-lista li::before {
+    content: '🐾';
+    position: absolute;
+    left: 0;
+}
+
+/* Ajuste para o perfil centrado do João */
+.perfil-unico {
+    width: 100% !important;
+}
+
+.card-centrado {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Rodapé da Tabela */
+.tabela-cards tfoot td {
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-style: italic;
+    color: var(--laranja-pets);
+    padding-top: 40px;
+}
+
+/* ==========================================================
+   12. JANELAS DE FOTO AMPLIADA (MODAL / LIGHTBOX)
+========================================================== */
+
+/* Esconde o modal por defeito */
+.modal-foto {
+    display: none;
+    position: fixed; /* Fica fixo no ecrã mesmo se o utilizador fizer scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo preto semi-transparente */
+    z-index: 9999; /* Garante que fica por cima de TUDO no site */
+    justify-content: center; /* Centra a foto na horizontal */
+    align-items: center; /* Centra a foto na vertical */
+}
+
+/* O "Truque": Quando o link clica no ID do modal, ele ativa o :target e aparece! */
+.modal-foto:target {
+    display: flex;
+}
+
+/* Estilo da foto quando está ampliada no meio do ecrã */
+.modal-foto img {
+    max-width: 90%;
+    max-height: 80vh; /* Não deixa a foto ultrapassar 80% da altura do ecrã */
+    border-radius: 15px;
+    border: 5px solid var(--branco-puro);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+    animation: zoomFoto 0.4s ease; /* Animação suave ao abrir */
+}
+
+/* Estilo do botão X para fechar */
+.fechar-modal {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: var(--branco-puro);
+    font-size: 4rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito ao passar o rato no X */
+.fechar-modal:hover {
+    color: var(--laranja-pets);
+    transform: scale(1.1);
+}
+
+/* Animação para a foto fazer um zoom suave quando abre */
+@keyframes zoomFoto {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ==========================================================
+   13. PÁGINA DE CONTACTOS E FORMULÁRIO
+========================================================== */
+
+.seccao-contacto {
+    text-align: center;
+}
+
+/* Container que coloca a Info e o Formulário lado a lado */
+.container-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+/* Caixas individuais da Info e Formulário */
+.info-contacto, .formulario-contacto {
+    flex: 1; /* Faz com que ambas as caixas ocupem o mesmo espaço */
+    min-width: 300px; /* Protege o design em telemóveis */
+    background-color: var(--branco-puro);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.info-contacto h3, .formulario-contacto h3 {
+    color: var(--laranja-pets);
+    margin-bottom: 15px;
+    margin-top: 25px;
+    font-size: 1.2rem;
+}
+
+.info-contacto h3:first-child {
+    margin-top: 0;
+}
+
+.info-contacto p {
+    margin-bottom: 10px;
+}
+
+/* ==========================================================
+   14. ESTILO DO FORMULÁRIO
+========================================================== */
+
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--roxo-pastel);
+}
+
+/* Estilo para as caixas de texto e opções */
+.grupo-input input[type="text"],
+.grupo-input input[type="email"],
+.grupo-input select,
+.grupo-input textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--rosa-pastel);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--texto-escuro);
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Garante que o padding não quebra a largura */
+}
+
+/* Efeito ao clicar no campo para escrever */
+.grupo-input input[type="text"]:focus,
+.grupo-input input[type="email"]:focus,
+.grupo-input select:focus,
+.grupo-input textarea:focus {
+    outline: none;
+    border-color: var(--laranja-pets);
+    box-shadow: 0 0 8px rgba(243, 156, 18, 0.2);
+    background-color: var(--branco-puro);
+}
+
+/* Ajuste da altura da caixa de mensagem */
+.grupo-input textarea {
+    resize: vertical; 
+}
+
+/* Botão de Enviar */
+.btn-enviar {
+    background-color: var(--laranja-pets);
+    color: var(--branco-puro);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+}
+
+/* ==========================================================
+   15. MAPA E SISTEMA DE ESTRELAS AVANÇADO
+========================================================== */
+
+/* Estilo do Mapa */
+.mapa-container {
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden; /* Corta os cantos do mapa à medida da borda */
+    border: 3px solid var(--rosa-pastel);
+}
+
+/* Sistema de Estrelas (CSS Moderno usando Flexbox Reverso) */
+.estrelas {
+    display: flex;
+    flex-direction: row-reverse; /* Inverte a ordem para a lógica do CSS funcionar */
+    justify-content: flex-end;
+    font-size: 2.2rem;
+}
+
+/* Esconde as bolinhas do radio button original */
+.estrelas input {
+    display: none;
+}
+
+/* Estilo das estrelas apagadas */
+.estrelas label {
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    padding: 0 2px;
+}
+
+/* Quando passas o rato ou clicas, a estrela e as anteriores acendem */
+.estrelas input:checked ~ label,
+.estrelas label:hover,
+.estrelas label:hover ~ label {
+    color: #f1c40f; /* Cor amarela/dourada */
+}
+
+/* Efeito de escala ao clicar na estrela */
+.estrelas label:active {
+    transform: scale(1.3);
+}
